@@ -1,84 +1,156 @@
-  html,
-  body,
-  figure,
-  #map,
-  #sidebar {
-    height: 100%;
-    margin: 1em;
-    padding: 1em;
-  }
-.img-container {
-  position: relative;
-  display: inline-block;
-}
+ @font-face {
+     font-family: 'Confidently';
+     src: url('./assets/Confidently.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+ }
 
-.img-container .overlay {
-  position: absolute;
-  top: 15;
-  left: 15;
-  width: 100%;
-  height: 100%;
-}
+ @font-face {
+     font-family: 'ArgentumSans-Bold';
+     src: url('./assets/ArgentumSans-Bold.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+ }
 
-.overlay {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  color: rgb(205, 156, 156);
-  text-shadow: rgb(205, 156, 156) 0px 0px 3px;
-}
-  #sidebar,
-  #map {
-    float: left;
-  }
+ @font-face {
+     font-family: 'ArgentumSans-Medium';
+     src: url('./assets/ArgentumSans-Medium.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+ }
 
-  #sidebar {
-    width: 25%;
-    border-right: 1px solid black;
-    box-sizing: border-box;
-    overflow-y: auto;
-    text-align: center;
-  }
+ @font-face {
+     font-family: 'ArgentumSans-Lignt';
+     src: url('./assets/ArgentumSans-Light.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+ }
 
-  #map {
-    width: 75%;
-  }
+ :root {
+     --primary-color: #463131;
+     /* Replace with your desired primary color */
+ }
 
-  #sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+ .primary {
+     color: #370084;
+ }
 
-  #tag {
-    margin: 1em 0;
-  }
+ body {
+     margin: 0 3em;
+     font-family: ArgentumSans-Medium, Courier, monospace;
+ }
 
-  #sidebar hr {
-    margin-top: 0;
-  }
+ h1 {
+     color: #370084;
+     font-size: 12.5rem;
+     font-family: Confidently, Courier, monospace;
 
-  #sidebar ul {
-    text-align: left;
-  }
 
-  #sidebar img {
-    vertical-align: middle;
-    height: 60px;
-    width: 100px;
-  }
+ }
 
-  #sidebar li {
-    border: 1px solid black;
-    margin-bottom: 1em;
-    cursor: pointer;
-  }
+ h2 {
+     color: #370084;
 
-  #sidebar li:hover {
-    background-color: #eee;
-    color: red;
-  }
+ }
 
-  .summary {
-    display: none;
-  }
+ a {
+     color: black;
+     text-decoration: none;
+ }
+
+ ul {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: flex-end;
+     list-style-type: none;
+ }
+
+ li {
+     padding: 0 1rem;
+ }
+
+ hr {
+     margin: 0 0 10em 0;
+     opacity: 0.1;
+ }
+
+ label {
+     display: block;
+ }
+
+ .clear {
+     clear: both;
+ }
+
+ #root {
+     margin: 1em 3em;
+ }
+
+ .fa,
+ .fa-brands {
+     font-size: 5em;
+ }
+
+ .navWrapper {
+     display: flex;
+     align-content: center;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .nav {
+     font-size: medium;
+ }
+
+ .logo {
+     width: 8em;
+ }
+
+ .hero {
+     display: flex;
+     align-items: flex-end;
+     justify-content: left;
+     background-image: url('./assets/background-hero.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 80vh
+ }
+
+
+ .intro {
+     width: 50%;
+ }
+
+ .intro p {
+     line-height: 2em;
+     letter-spacing: 0.02em;
+ }
+
+ #bio p {
+     line-height: 2em;
+     letter-spacing: 0.02em;
+ }
+
+ #skills .flex {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: flex-start;
+     justify-content: center;
+     text-align: center;
+ }
+
+ #skills .box {
+     padding: 1em;
+     margin: 1em;
+     width: 25%;
+ }
+
+ #contact .contactForm {
+     float: right;
+ }
+
+ #contact a {
+     display: block;
+ }

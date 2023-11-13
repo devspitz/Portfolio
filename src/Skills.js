@@ -4,15 +4,17 @@ export default function Skills() {
         <>
             <div id="skills">
                 <h1>Skills</h1>
+                <div className="flex">
                 <div className="box">
-                    <img src="images/html.jpg" />
+                    <i class="fa-brands fa-html5"></i>
                     <h2 className="title">
                         HMTL
                     </h2>
 
                 </div>
                 <div className="box">
-                    <img src="images/css.jpg" />
+                    <i class="fa-brands fa-css3"></i>
+
                     <h2 className="title">
                         CSS
                     </h2>
@@ -20,7 +22,7 @@ export default function Skills() {
                 </div>
 
                 <div className="box">
-                    <img src="images/javaScript.jpg" />
+                    <i class="fa-brands fa-js"></i>
                     <h2 className="title">
                         JavaScript
                     </h2>
@@ -28,7 +30,7 @@ export default function Skills() {
                 </div>
 
                 <div className="box">
-                    <img src="images/react.jpg" />
+                    <i class="fa-brands fa-react"></i>
                     <h2 className="title">
                         React.JS
                     </h2>
@@ -52,15 +54,14 @@ export default function Skills() {
                 </div>
 
                 <div className="box">
-                    <img src="images/node.jpg" />
+                    <i class="fa-brands fa-node-js"></i>
                     <h2 className="title">
                         Node.JS
                     </h2>
 
                 </div>
 
-                <div className="box">
-                    <img src="images/java.jpg" />
+                <div className="box"><i class="fa-brands fa-java"></i>
                     <h2 className="title">
                         Java
                     </h2>
@@ -68,7 +69,7 @@ export default function Skills() {
                 </div>
 
                 <div className="box">
-                    <img src="images/python.jpg" />
+                    <i class="fa-brands fa-python"></i>
                     <h2 className="title">
                         Python
                     </h2>
@@ -76,7 +77,7 @@ export default function Skills() {
                 </div>
 
                 <div className="box">
-                    <img src="images/sql.jpg" />
+                    sql:<i class="fa-solid fa-database"></i>
                     <h2 className="title">
                         SQL
                     </h2>
@@ -84,11 +85,12 @@ export default function Skills() {
                 </div>
 
                 <div className="box">
-                    <img src="images/php.jpg" />
+                    <i class="fa-brands fa-php"></i>
                     <h2 className="title">
                         PHP
                     </h2>
 
+                </div>
                 </div>
             </div>
 

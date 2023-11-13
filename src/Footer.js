@@ -2,7 +2,7 @@ export default function Footer() {
 
     return (
         <>
-            <div>
+            <div id="footer">
                 <span>&copy; Devorah Kogan 2023</span>
             </div>
         </>
