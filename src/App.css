@@ -83,6 +83,7 @@
      clear: both;
  }
 
+
  #root {
      margin: 1em 3em;
  }
@@ -104,14 +105,14 @@
  }
 
  .logo {
-     width: 8em;
+     width: 6em;
  }
 
  .hero {
      display: flex;
      align-items: flex-end;
      justify-content: left;
-     background-image: url('./assets/background-hero.jpg');
+     background-image: url('./assets/banner-hero.png');
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
@@ -128,6 +129,14 @@
      letter-spacing: 0.02em;
  }
 
+  .btn {
+        display: inline-block;
+     background-color: #421286;
+     border: none;
+     margin: 5px 25px;
+     color: white;
+ }
+
  #bio p {
      line-height: 2em;
      letter-spacing: 0.02em;
@@ -137,14 +146,104 @@
      display: flex;
      flex-wrap: wrap;
      align-items: flex-start;
-     justify-content: center;
+     justify-content: space-evenly;
      text-align: center;
  }
 
  #skills .box {
-     padding: 1em;
-     margin: 1em;
-     width: 25%;
+     width: 10%;
+     margin: 2em;
+ }
+
+ #skills h2 {
+     font-size: 1em;
+ }
+#resume div {
+  display: flex;
+  justify-content: center;
+padding: 0 0 56px 0;
+}
+ /* Slider container */
+ .slider-wrapper {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .slider-wrapper div {
+    /* border: 5px solid #370084;*/
+     width: 200px;
+     padding: 18px;
+     margin: 36px;
+     text-align: center;
+        background: #8e5d9e47;
+ }
+
+ .slider-wrapper a {
+color: white;
+  }
+  
+ /* Individual slide */
+ .slide {
+     padding: 20px;
+     border-radius: 10px;
+ }
+
+ /* Image */
+ .slide img {
+     width: 100%;
+     height: 300px;
+     object-fit: cover;
+     border-radius: 10px;
+ }
+
+ /* Caption */
+ .caption {
+     position: absolute;
+     bottom: 20px;
+     left: 20px;
+     padding: 10px 15px;
+     background: white;
+     border-radius: 10px;
+     opacity: 0;
+     transition: opacity 0.2s;
+ }
+
+ .slide:hover .caption {
+     opacity: 1;
+ }
+
+ /* Arrows */
+ .slick-arrow {
+     border: none;
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+     line-height: 30px;
+     background: #333;
+     color: white;
+ }
+
+ @media (max-width: 1024px) {
+     .slide {
+         flex: 0 0 33.33%;
+         max-width: 33.33%;
+     }
+ }
+
+ @media (max-width: 600px) {
+     .slide {
+         flex: 0 0 50%;
+         max-width: 50%;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .slide {
+         flex: 0 0 100%;
+         max-width: 100%;
+     }
  }
 
  #contact .contactForm {

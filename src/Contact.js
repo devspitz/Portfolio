@@ -17,11 +17,12 @@ export default function Contact() {
             <div id="contact">
 
                 <h1>Contact</h1>
-                <h2>Devora Kogan</h2>
-                <a href="tel:2168674782">Call</a>
+                <h2>Devorah Kogan</h2>
+                <div className='contactButtons'>
+                    <a href="tel:2168674782"><i class="fa-solid fa-phone"></i> Call</a>
 
-                <a href="mailto:spitzdev@gmail.com">Email</a>
-
+                    <a href="mailto:spitzdev@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+                </div>
                 <form className='contactForm'>
                     <input type='text' value={formName} name="name" />
                     <label for="name">Name</label>

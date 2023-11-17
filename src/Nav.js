@@ -4,9 +4,9 @@ export default function Nav() {
 
     return (
         <div className='navWrapper'>
-        <div className="logo">
-            <img src={logo} alt="logo" width="100%" />
-        </div>
+            <div className="logo">
+                <img src={logo} alt="logo" width="100%" />
+            </div>
             <ul className="nav">
                 <li>
                     <a href="#bio">Bio</a>

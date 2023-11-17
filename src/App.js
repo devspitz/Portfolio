@@ -19,6 +19,7 @@ function App() {
             <Bio /> 
             <hr />
             <Skills />
+            <hr />
            <Projects />
             <hr />
             <Resume />

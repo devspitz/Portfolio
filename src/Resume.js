@@ -6,7 +6,9 @@ export default function Skills() {
         <>
             <div id="resume">
                 <h1>Resume</h1>
-                <a href={resume} download className="btn button">Download Resume</a> 
+                <div>
+                    <a href={resume} download className="btn button">Download Resume <i class="fa-solid fa-download"></i></a>
+                </div>
             </div>
         </>
     )
