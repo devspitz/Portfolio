@@ -1,0 +1,23 @@
+{
+    "name": "portfolio",
+    "version": "0.1.0",
+    "description": "My portfolio website",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "client": "cd client && npm start",
+        "server": "cd server && nodemon server.js",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "build": "npm run build --prefix client"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "git": "^0.1.5",
+        "mongodb": "^6.3.0",
+        "mongoose": "^8.0.2"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
