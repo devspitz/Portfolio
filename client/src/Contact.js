@@ -32,7 +32,7 @@ export default function Contact() {
         setIsSubmitting(true);
 
         try {
-            await fetch('/contact', {
+            await fetch('http://localhost:3001/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
