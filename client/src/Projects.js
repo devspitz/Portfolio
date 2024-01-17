@@ -73,7 +73,7 @@ export default function Projects() {
             id: 5,
             image: nah,
             title: 'Nishei Adirei Hatorah',
-            link: 'https://www.adireihatorah.com/nishei',
+            link: 'https://www.adireihatorah.com/nshei',
             active: true
         }, {
             id: 6,
@@ -98,11 +98,11 @@ export default function Projects() {
             image: ykli,
             title: 'Yeshiva Ketanah of Long Island',
             link: 'https://www.ykli.org',
-            active: false
+            active: true
         }, {
             id: 10,
             image: scs,
-            title: 'The Specail Childrens Center',
+            title: 'The Center',
             link: 'https://www.thecenternj.org',
             active: false
         }

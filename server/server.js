@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3001;
 const path = require('path');
+require('./database');
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'client/build')));

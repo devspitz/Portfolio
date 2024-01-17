@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-/*import { Turnstile } from '@turnstile/turnstile-react';*/
+import React, { useState, useEffect } from 'react';
+// import { Turnstile } from '@turnstile/turnstile-react';
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -9,18 +9,18 @@ export default function Contact() {
     const [formMsg, setformMsg] = useState('')
     const [userName, setUserName] = useState('')
 
-    /* window.onloadTurnstileCallback = function () {
-         turnstile.render('#example-container', {
-             sitekey: '<YOUR_SITE_KEY>',
-             callback: function (token) {
-                 console.log(`Challenge Success ${token}`);
-             },
-         });
-     };*/
-    /* const handleTurnstileSubmit = (token) => {
-         console.log('Turnstile token:', token);
- 
-     }*/
+    //  window.onloadTurnstileCallback = function () {
+    //      turnstile.render('#example-container', {
+    //          sitekey: 'Y0x4AAAAAAAOC94YjmxxeTBzs',
+    //          callback: function (token) {
+    //              console.log(`Challenge Success ${token}`);
+    //          },
+    //      });
+    //  }; 
+    //  const handleTurnstileSubmit = (token) => {
+    //      console.log('Turnstile token:', token);
+
+    //  } 
 
 
     useEffect(() => {
@@ -91,10 +91,7 @@ export default function Contact() {
 
                             <label htmlFor="msg">Message</label>
                             <input type='textfield' value={formMsg} name="msg" onChange={e => setformMsg(e.target.value)} />
-                            {/**  <Turnstile
-                                sitekey="0x4AAAAAAAOC94YjmxxeTBzs"
-                                callback={handleTurnstileSubmit}
-                            /> */}
+                            {/*<Turnstile sitekey="0x4AAAAAAAOC94YjmxxeTBzs" callback={handleTurnstileSubmit} />  */}                        />
                             <button className='btn'>Send <i className="fa-solid fa-arrow-right"></i></button>
                         </form>
                     }
