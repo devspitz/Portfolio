@@ -9,6 +9,25 @@ export default function Contact() {
     const [formMsg, setformMsg] = useState('')
     const [userName, setUserName] = useState('')
 
+
+
+    useEffect(() => {
+        setUserName(formName);
+        // Make an HTTP request to the serverless function endpoint
+        fetch('/.netlify/functions/hello-world/hello-world')
+            .then(response => response.json()) // Parse the JSON response
+            .then(data => {
+                // Use the data from the serverless function to show a message on your frontend
+                const message = data.message;
+                // For example, you could update a DOM element with the message
+                document.getElementById('message-container').innerText = message;
+            })
+            .catch(error => {
+                // Handle any errors that occur during the fetch
+                console.error('Error:', error);
+            });
+    }, [])
+
     //  window.onloadTurnstileCallback = function () {
     //      turnstile.render('#example-container', {
     //          sitekey: 'Y0x4AAAAAAAOC94YjmxxeTBzs',
@@ -61,6 +80,8 @@ export default function Contact() {
 
     return (
         <>
+            <div id="message-container"> 
+            </div>
             <div id="contact">
 
                 <h1>Contact</h1>
