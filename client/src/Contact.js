@@ -50,12 +50,13 @@ export default function Contact() {
             setformPhone('');
             setformEmail('');
             setformMsg('');
-            setIsSubmitting(true);
         } catch (error) {
             console.error(error);
+        } finally {
             setIsSubmitting(false);
         }
     }
+
 
 
     return (
