@@ -9,12 +9,6 @@ export default function Contact() {
     const [formMsg, setformMsg] = useState('')
     const [userName, setUserName] = useState('')
 
-
-
-    useEffect(() => {
-        setUserName(formName);
-    }, [isSubmitting])
-
     useEffect(() => {
         setUserName(formName);
         // Make an HTTP request to the serverless function endpoint
@@ -45,7 +39,7 @@ export default function Contact() {
     //              console.log(`Challenge Success ${token}`);
     //          },
     //      });
-    //  }; 
+    //  }; <Turnstile sitekey="0x4AAAAAAAOC94YjmxxeTBzs" callback={handleTurnstileSubmit}  >
     //  const handleTurnstileSubmit = (token) => {
     //      console.log('Turnstile token:', token);
 
@@ -120,7 +114,6 @@ export default function Contact() {
 
                             <label htmlFor="msg">Message</label>
                             <input type='textfield' value={formMsg} name="msg" onChange={e => setformMsg(e.target.value)} />
-                            {/*<Turnstile sitekey="0x4AAAAAAAOC94YjmxxeTBzs" callback={handleTurnstileSubmit}  >  */}                        />
                             <button className='btn'>Send <i className="fa-solid fa-arrow-right"></i></button>
                         </form>
                     }
