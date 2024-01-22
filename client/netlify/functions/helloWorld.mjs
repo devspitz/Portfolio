@@ -1,29 +1,42 @@
+import nodemailer from 'nodemailer';
+
 export default async function handler(event) {
   const data = await event.json()
-  console.log(data);
-  return new Response('Hello World');
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
+  const { name, phone, email, message } = data;
+
+  const messageString = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
+
+
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      type: 'OAuth2',
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
+      refreshToken: process.env.REFRESH_TOKEN
+    }
+  });
+
+  let mailOptions = {
+    from: 'spitzdev@gmail.com',
+    to: 'spitzdev@gmail.com',
+    subject: 'New Contact Request',
+    text: messageString
   };
-  try {
-    if (event.httpMethod === "OPTIONS") {
-      return {
-        headers,
-        statusCode: 200,
-        //  body: ""
-      }
+
+
+  transporter.sendMail(mailOptions, function (err, data) {
+    if (err) {
+      console.log("Error " + err);
+    } else {
+      console.log("Email sent successfully");
     }
-    console.log("event.httpMethod", event.httpMethod)
-    // const subject = event.queryStringParameters.name || 'World'
-    return {
-      statusCode: 200,
-      // body: JSON.stringify({ message: `Hello ${subject}` })
-      headers
-      // isBase64Encoded: true,
-    }
-  } catch (error) {
-    return { statusCode: 500, body: 'error' }
-  }
+  });
+
+  // const data = await event.json()
+  // console.log(data);
+  // return new Response('Hello World');
 }
+
