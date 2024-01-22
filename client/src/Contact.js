@@ -13,10 +13,14 @@ export default function Contact() {
 
     useEffect(() => {
         setUserName(formName);
+    }, [isSubmitting])
+
+    useEffect(() => {
+        setUserName(formName);
         // Make an HTTP request to the serverless function endpoint
         fetch('/.netlify/functions/hello-world/hello-world', {
             method: 'POST',
-            body: JSON.stringify(formName),
+            body: JSON.stringify(userName),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -48,9 +52,6 @@ export default function Contact() {
     //  } 
 
 
-    useEffect(() => {
-        setUserName(formName);
-    }, [isSubmitting])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
