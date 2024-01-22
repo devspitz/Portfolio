@@ -14,7 +14,13 @@ export default function Contact() {
     useEffect(() => {
         setUserName(formName);
         // Make an HTTP request to the serverless function endpoint
-        fetch('/.netlify/functions/hello-world/hello-world')
+        fetch('/.netlify/functions/hello-world/hello-world', {
+            method: 'POST',
+            body: JSON.stringify(formName),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
             .then(response => response.json()) // Parse the JSON response
             .then(data => {
                 // Use the data from the serverless function to show a message on your frontend
@@ -80,7 +86,7 @@ export default function Contact() {
 
     return (
         <>
-            <div id="message-container"> 
+            <div id="message-container">
             </div>
             <div id="contact">
 
@@ -113,7 +119,7 @@ export default function Contact() {
 
                             <label htmlFor="msg">Message</label>
                             <input type='textfield' value={formMsg} name="msg" onChange={e => setformMsg(e.target.value)} />
-                            {/*<Turnstile sitekey="0x4AAAAAAAOC94YjmxxeTBzs" callback={handleTurnstileSubmit} />  */}                        />
+                            {/*<Turnstile sitekey="0x4AAAAAAAOC94YjmxxeTBzs" callback={handleTurnstileSubmit}  >  */}                        />
                             <button className='btn'>Send <i className="fa-solid fa-arrow-right"></i></button>
                         </form>
                     }
