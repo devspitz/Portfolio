@@ -32,7 +32,7 @@ export default function Contact() {
                 // Handle any errors that occur during the fetch
                 console.error('Error:', error);
             });
-    }, [])
+    }, [isSubmitting])
 
     //  window.onloadTurnstileCallback = function () {
     //      turnstile.render('#example-container', {
