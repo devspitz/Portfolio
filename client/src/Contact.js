@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [formName, setformName] = useState('')
-    const [formEmail, setformEmail] = useState('')
-    const [formPhone, setformPhone] = useState('')
-    const [formMsg, setformMsg] = useState('')
+    const [formName, setFormName] = useState('')
+    const [formEmail, setFormEmail] = useState('')
+    const [formPhone, setFormPhone] = useState('')
+    const [formMsg, setFormMsg] = useState('')
     const [userName, setUserName] = useState('')
 
 
@@ -44,10 +44,10 @@ export default function Contact() {
                 }),
             });
 
-            setformName('');
-            setformPhone('');
-            setformEmail('');
-            setformMsg('');
+            setFormName('');
+            setFormPhone('');
+            setFormEmail('');
+            setFormMsg('');
         } catch (error) {
             console.error(error);
         } finally {
@@ -82,16 +82,16 @@ export default function Contact() {
                         <form className='contactForm' onSubmit={handleSubmit}>
 
                             <label htmlFor="name">Name</label>
-                            <input type='text' value={formName} name="name" onChange={e => setformName(e.target.value)} />
+                            <input type='text' value={formName} name="name" onChange={e => setFormName(e.target.value)} />
 
                             <label htmlFor="email">Email</label>
-                            <input type='text' value={formEmail} name="email" onChange={e => setformEmail(e.target.value)} />
+                            <input type='text' value={formEmail} name="email" onChange={e => setFormEmail(e.target.value)} />
 
                             <label htmlFor="phone">Phone</label>
-                            <input type='text' value={formPhone} name="phone" onChange={e => setformPhone(e.target.value)} />
+                            <input type='text' value={formPhone} name="phone" onChange={e => setFormPhone(e.target.value)} />
 
                             <label htmlFor="msg">Message</label>
-                            <input type='textfield' value={formMsg} name="msg" onChange={e => setformMsg(e.target.value)} />
+                            <input type='textfield' value={formMsg} name="msg" onChange={e => setFormMsg(e.target.value)} />
                             <button className='btn'>Send <i className="fa-solid fa-arrow-right"></i></button>
                         </form>
                     }
