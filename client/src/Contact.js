@@ -31,7 +31,7 @@ export default function Contact() {
         setIsSubmitting(true);
 
         try {
-            await fetch('/.netlify/functions/helloWorld', {
+            await fetch('/.netlify/functions/index', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
