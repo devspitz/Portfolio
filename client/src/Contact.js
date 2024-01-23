@@ -44,13 +44,13 @@ export default function Contact() {
                 }),
             });
 
+        } catch (error) {
+            console.error(error);
+        } finally {
             setFormName('');
             setFormPhone('');
             setFormEmail('');
             setFormMsg('');
-        } catch (error) {
-            console.error(error);
-        } finally {
             setIsSubmitting(false);
         }
     }
