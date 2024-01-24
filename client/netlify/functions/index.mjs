@@ -28,16 +28,13 @@ export default async function handler(event) {
 
     await transporter.sendMail(mailOptions);
     console.log("Email sent successfully");
-    return { statusCode: 200, body: JSON.stringify({ success: true }) };
+     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
     console.error("Error sending email: " + error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: ' Failed fetching images ' }),
-    };
+        return new Response(JSON.stringify({ error: 'Failed sending email' }), { status: 500 });
   }
 };
 // const data = await event.json()
 // console.log(data);
-// return new Response('Hello World');
+//return new Response('Hello World');
 
