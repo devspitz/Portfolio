@@ -69,11 +69,11 @@ export default function Contact() {
                         <h2>Let's talk :)</h2>
                         <p>Devorah Kogan</p>
 
-                        <a href="tel:2168674782" className='btn'><i className="fa-solid fa-phone"></i> Call / Message</a>
+                        <a href="tel:2168674782" className='btn'><i className="fa-solid fa-phone"></i> Call </a>
 
                         <a href="mailto:spitzdev@gmail.com" className='btn'><i className="fa-solid fa-envelope"></i> Email</a>
 
-                        <a href="https://www.linkedin.com/in/devora-kogan-spitz-a8b54a206/" target='_blank' rel="noreferrer" className='btn'>
+                        <a href="https://www.linkedin.com/in/devorah-kogan-spitz-a8b54a206" target='_blank' rel="noreferrer" className='btn'>
                             <i className="fa-brands fa-linkedin"></i> LinkedIn</a>
                     </div>
                     {isSubmitting ? <div className='response'>

@@ -114,7 +114,7 @@ export default function Projects() {
             <div id="projects">
 
                 <h1>Projects</h1>
-                <p>  Check out my most recent projects I've managed:</p>
+                <p>  Check out the most recent projects I've managed and helped develop:</p>
                 <div className='slider-wrapper'>
                     {data.map((item) => (
                         <div key={item.id}>

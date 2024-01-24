@@ -10,7 +10,7 @@ export default function Skills() {
                     <div className="box">
                         <i className="fa fa-brands fa-html5"></i>
                         <h2 className="title">
-                            HMTL
+                            HTML
                         </h2>
 
                     </div>
@@ -26,17 +26,17 @@ export default function Skills() {
                         <h2 className="title">
                             JavaScript
                         </h2>
-                    </div> 
-                    
+                    </div>
+
                     <div className="box">
                         <i className="fa fa-solid fa-leaf"></i>
                         <h2 className="title">
-                            Mongo DB
+                            MongoDB
                         </h2>
 
                     </div>
                     <div className="box express">
-                        <img src={Express} alt="Express JS"   width="90%" />
+                        <img src={Express} alt="Express JS" width="90%" />
                         <h2 className="title">
                             Express
                         </h2>
