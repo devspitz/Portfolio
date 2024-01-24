@@ -69,7 +69,7 @@ export default function Contact() {
                         <h2>Let's talk :)</h2>
                         <p>Devorah Kogan</p>
 
-                        <a href="tel:2168674782" className='btn'><i className="fa-solid fa-phone"></i> Call </a>
+                        <a href="tel:2168674782" className='btn'><i className="fa-solid fa-phone"></i> Call 216-867-4782</a>
 
                         <a href="mailto:spitzdev@gmail.com" className='btn'><i className="fa-solid fa-envelope"></i> Email</a>
 
