@@ -396,13 +396,22 @@ label {
         padding: .5em;
     }
 
+    #bio .bioDiv {
+        display: block;
+    }
+
     #bio .bioDiv p {
-        text-align: left;
+        text-align: center;
+        width: 95%;
     }
 
     #bio .bioDiv h2 {
-        font-size: 2em;
-        margin-left: 1em;
+        font-size: 1.5em;
+        display: inline;
+    }
+
+    #bio .bioDiv .resume {
+        margin: 1em auto;
     }
 
     .navWrapper {
@@ -446,6 +455,12 @@ label {
 
     #contact p {
         margin: 1em 0;
+    }
+
+    #contact .fa-solid,
+    #contact .fa-brands,
+    #contact .fa {
+        font-size: 1em;
     }
 
     #contact .contactForm {
