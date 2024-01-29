@@ -356,7 +356,7 @@ label {
     }
 
     h1 {
-        font-size: 4em;
+        font-size: 3em;
         text-align: center;
     }
 
@@ -386,6 +386,16 @@ label {
         font-size: 3em;
     }
 
+    #projects .slider-wrapper div {
+        margin: 1.2em;
+        width: 10em;
+    }
+
+    .slider-wrapper a {
+        font-size: 0.8em;
+        padding: .5em;
+    }
+
     #bio .bioDiv p {
         text-align: left;
     }
@@ -405,6 +415,16 @@ label {
         margin: 2em;
     }
 
+    #testimonials .testimonialsDiv {
+        display: block;
+    }
+
+    #testimonials .box {
+        margin: 1em;
+        width: 95%;
+        text-align: center;
+    }
+
     #contact .contactFlex {
         display: block;
 
@@ -416,16 +436,22 @@ label {
     }
 
     #contact a {
-        margin: .5em auto;
-        padding: .5em;
+        margin: auto 1em;
+        padding: 1em;
         text-align: center;
         font-size: 0.8em;
+        display: inline;
+
+    }
+
+    #contact p {
+        margin: 1em 0;
     }
 
     #contact .contactForm {
-        width: 70%;
+        margin: 3em auto;
         text-align: center;
-        margin: 1em auto;
+        width: 60%;
     }
 
     #contact .contactForm label {
@@ -447,5 +473,6 @@ label {
         display: block;
         justify-content: center;
         background-image: none;
+        min-height: auto;
     }
 }
