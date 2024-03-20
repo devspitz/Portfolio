@@ -104,7 +104,7 @@ export default function Projects() {
             image: scs,
             title: 'The Center',
             link: 'https://www.thecenternj.org',
-            active: false
+            active: true
         }
     ]
 
