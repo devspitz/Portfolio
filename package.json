@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "cors": "^2.8.5",
-        "express": "^4.17.1",
+        "express": "^4.19.2",
         "git": "^0.1.5",
         "mongodb": "^6.3.0",
         "mongoose": "^8.0.2"
